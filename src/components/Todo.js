@@ -1,14 +1,5 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  Keyboard,
-} from 'react-native';
+import {StyleSheet, View, Text, Alert, Keyboard} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import InputItem from './InputItem';
 import TodoList from './TodoList';

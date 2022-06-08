@@ -1,14 +1,5 @@
 import React, {useState} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  Keyboard,
-} from 'react-native';
+import {StyleSheet, View, TouchableOpacity, TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import TodoList from './TodoList';
 
@@ -21,7 +12,6 @@ const InputItem = ({
 }) => {
   return (
     <View>
-      {/* style={styles.Container}> */}
       <View style={styles.footer}>
         <View style={styles.inputContainer}>
           <TextInput
