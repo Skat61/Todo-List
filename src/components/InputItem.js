@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, TouchableOpacity, TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import TodoList from './TodoList';
+import {COLORS} from '../Colors';
 
 const InputItem = ({
   value1,
@@ -29,6 +29,7 @@ const InputItem = ({
             placeholder="Текст задачи..."
             value={value2} // 3
             multiline={true}
+            //maxLength={50}
             numberOfLines={3}
             onChangeText={onChangeText2} //4
             onSubmitEditing={addTodoItem} // 5
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
   iconContainer: {
     height: 50,
     width: 50,
-    backgroundColor: '#8BC34A',
+    backgroundColor: COLORS.green,
     elevation: 40,
     borderRadius: 50 / 2,
     justifyContent: 'center',

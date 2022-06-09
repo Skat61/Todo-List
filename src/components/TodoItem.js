@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {COLORS} from '../Colors';
 
 const TodoItem = ({title, content, isComplete, complete, remove}) => {
   return (
@@ -68,8 +69,8 @@ const styles = StyleSheet.create({
     // paddingVertical: 6,
     borderRadius: 20,
   },
-  buttonDelete: {backgroundColor: '#E53935'},
-  buttonDone: {backgroundColor: '#8BC34A'},
+  buttonDelete: {backgroundColor: COLORS.red},
+  buttonDone: {backgroundColor: COLORS.green},
   titleComplete: {
     textDecorationLine: 'line-through',
   },

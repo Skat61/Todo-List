@@ -1,30 +1,14 @@
 import React, {useState} from 'react';
 import {StyleSheet, View, Text, Alert, Keyboard} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {DataTodoItem} from '../DataTodoItem';
 import InputItem from './InputItem';
 import TodoList from './TodoList';
+import {COLORS} from '../Colors';
+import Header from './Header';
 
 const Todo = () => {
-  const [todoItems, setTodoItems] = useState(() => [
-    {
-      id: Math.random(),
-      title: 'Задача 1',
-      content: 'какой-то текст 1',
-      isComplete: false,
-    },
-    {
-      id: Math.random(),
-      title: 'Задача 2',
-      content: 'какой-то текст 2',
-      isComplete: true,
-    },
-    {
-      id: Math.random(),
-      title: 'Задача 3',
-      content: 'какой-то текст 3',
-      isComplete: false,
-    },
-  ]);
+  const [todoItems, setTodoItems] = useState(() => DataTodoItem);
 
   const [textTitleInput, setTextTitleInput] = useState('');
   const changeTextTitle = text => setTextTitleInput(text);
@@ -77,7 +61,8 @@ const Todo = () => {
 
   return (
     <View style={styles.Container}>
-      <View style={styles.header}>
+      <Header clearList={clearAllTodos} />
+      {/* <View style={styles.header}>
         <Text
           style={{
             fontWeight: 'bold',
@@ -86,8 +71,13 @@ const Todo = () => {
           }}>
           TODO APP
         </Text>
-        <Icon name="delete" size={25} color="#E53935" onPress={clearAllTodos} />
-      </View>
+        <Icon
+          name="delete"
+          size={25}
+          color={COLORS.red}
+          onPress={clearAllTodos}
+        />
+      </View> */}
       <TodoList
         todoItems={todoItems}
         completeTodoItem={completeTodoItem}
@@ -110,14 +100,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  header: {
-    padding: 18,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#FFF',
-    elevation: 12,
-  },
+  // header: {
+  //   padding: 18,
+  //   flexDirection: 'row',
+  //   alignItems: 'center',
+  //   justifyContent: 'space-between',
+  //   backgroundColor: '#FFF',
+  //   elevation: 12,
+  // },
 });
 
 export default Todo;
