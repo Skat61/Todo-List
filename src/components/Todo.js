@@ -62,22 +62,7 @@ const Todo = () => {
   return (
     <View style={styles.Container}>
       <Header clearList={clearAllTodos} />
-      {/* <View style={styles.header}>
-        <Text
-          style={{
-            fontWeight: 'bold',
-            fontSize: 21,
-            color: '#616161',
-          }}>
-          TODO APP
-        </Text>
-        <Icon
-          name="delete"
-          size={25}
-          color={COLORS.red}
-          onPress={clearAllTodos}
-        />
-      </View> */}
+
       <TodoList
         todoItems={todoItems}
         completeTodoItem={completeTodoItem}
@@ -100,14 +85,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  // header: {
-  //   padding: 18,
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   justifyContent: 'space-between',
-  //   backgroundColor: '#FFF',
-  //   elevation: 12,
-  // },
 });
 
 export default Todo;
